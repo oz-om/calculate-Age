@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>HTML</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--Google Fonts-->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  
+  <div class="container">
+    <div class="themes">
+      <div class="toggel">&sccue;</div>
+      <ul class="colors">
+        <li data-color="0, 158, 255"></li>
+        <li data-color="168, 0, 255"></li>
+        <li data-color="255, 0, 187"></li>
+        <li data-color="255, 31, 0"></li>
+        <li data-color="53, 243, 247"></li>
+        <li data-color="0, 186, 159"></li>
+      </ul>
+    </div>
+    <div class="input-data">
+      <div class="current-date">
+        <label for="Today">Current Date</label>
+        <input type="date" id="currentDate"
+         onchange="getDate()"/>
+      </div>
+      <div class="birth-datr">
+        <label for="date">Date Of Birth</label>
+        <input type="date" id="dateBirth" 
+         onchange="getDate()" value="1990-12-01">
+      </div>
+    </div>
+    <div class="output">
+      <div class="age">
+        <h2>Age</h2>
+        <p id="YY">0</p>
+        <p><span id="MM">0</span> months | <span id="DD">0</span> days</p>
+      </div>
+      <div class="nextBirth">
+        <p>Next birthday</p>
+        <div class="icon">
+          <span>
+            <img src="Photo/birthday.svg" />
+          </span>
+          <p id="dayName">dayname</p>
+          <p><span id="Bmonth">0</span> months | <span id="Bdays">0</span> days</p>
+        </div>
+      </div>
+      <summary>
+        <p>summary</p>
+        <div class="details">
+          <div class="years">
+            <p>years</p>
+            <span id="years">0</span>
+          </div>
+          <div class="months">
+            <p>months</p>
+            <span id="months">0</span>
+          </div>
+          <div class="weeks">
+            <p>weeks</p>
+            <span id="weeks">0</span>
+          </div>
+          <div class="days">
+            <p>days</p>
+            <span id="days">0</span>
+          </div>
+          <div class="hours">
+            <p>hours</p>
+            <span id="hours">0</span>
+          </div>
+          <div class="minutes">
+            <p>minutes</p>
+            <span id="minutes">0</span>
+          </div>
+        </div>
+      </summary>
+    </div>
+  </div>
+  
+  <!-- 
+  blue : rgb(0 158 255 / 100%)
+bftji : rgb(168 0 255 / 100%)
+wrdi : rgb(255 0 187 / 100%)
+red : rgb(255 31 0 / 100%)
+orange : rgb(255 84 0 / 100%)
+green: rgb(0 186 159 / 100%)
+
+rgb(53 243 247 / 100%)
+  -->
+  
+  <script src="main.js"></script>
+</body>
+</html>
+

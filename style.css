@@ -1,0 +1,226 @@
+:root {
+  --color: 215, 0, 255;
+  --color-two: #03293D;
+  /*rgb(255 163 255 / 100%)*/
+}
+
+*,
+*:before,
+*:after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  user-select: none;
+  -webkit-user-select: none;
+  color: var(--color-two);
+  font-weight: 500
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+}
+
+.container {
+  width: 500px;
+  margin: 20px auto;
+  border-radius: 10px;
+  border: 1px solid rgba(var(--color), 1);
+  background-color: rgba(var(--color), .1);
+  padding: 20px;
+  position: relative
+}
+
+.input-data {
+  background-color: #FFF;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.birth-datr,
+.current-date {
+  display: flex;
+  justify-content: space-between;
+}
+
+.birth-datr {
+  margin-top: 20px;
+}
+
+/* A few custom styles for date inputs */
+input[type="date"] {
+  appearance: none;
+  -webkit-appearance: none;
+  font-size: 18px;
+  padding: 5px;
+  padding-left: 20px;
+  display: inline-block !important;
+  visibility: visible !important;
+  text-align: center;
+  letter-spacing: 2px;
+  font-weight: 600;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px 2px #DDDDDD;
+  color: rgba(var(--color));
+  cursor: pointer;
+}
+/* Removes the clear button from date inputs */
+input[type="date"]::-webkit-clear-button {
+  display: none;
+}
+
+/* Removes the spin button */
+input[type="date"]::-webkit-inner-spin-button {
+  display: none;
+}
+
+/* Always display the drop down caret */
+input[type="date"]::-webkit-calendar-picker-indicator {
+  color: #2c3e50;
+}
+
+.output {
+  padding: 5px;
+  margin-top: 10px;
+  border-radius: 10px;
+  box-shadow: 0 5px 10px 2px #DDDDDD;
+  background-color: #FFF;
+  display: flex;
+  flex-wrap: wrap;
+}
+.age {
+  width: 50%;
+  border-right: 1px solid rgba(var(--color));
+  border-bottom: 1px solid rgba(var(--color));
+  padding: 20px;
+}
+.age > h2 {
+  font-weight: 600;
+  font-size: 40px
+}
+.age p:first-of-type {
+  color: rgba(var(--color));
+  font-size: 45px;
+  font-weight: 600;
+  padding-left: 10px
+}
+.age p:first-of-type:after {
+  content: "years";
+  font-size: large;
+  margin-left: 5px
+}
+.age p:last-of-type {
+  font-size: large;
+}
+.nextBirth {
+  width: 50%;
+  border-bottom: 1px solid rgba(var(--color));
+  padding: 20px;
+  text-align: center
+}
+.nextBirth > p {
+  font-size: 16px
+}
+.nextBirth > p {
+  color: rgba(var(--color));
+  margin-bottom: 10px;
+}
+.nextBirth .icon > span:first-of-type{
+  display: inline-block;
+  position: relative;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(var(--color));
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 20px
+}
+.nextBirth .icon span img {
+  width: 60%;
+  position: absolute;
+  bottom: 25%;
+}
+
+.nextBirth .icon > :nth-child(2) {
+  margin-top: 12px
+}
+.nextBirth .icon > :last-child {
+  font-size: 15px;
+  margin-top: 5px
+}
+
+summary {
+  width: 100%;
+  padding: 20px;
+  font-size: 17px
+}
+summary > p {
+  width: 100%;
+  text-align: center;
+  color: rgba(var(--color));
+  margin-bottom: 20px;
+}
+summary .details {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-row-gap: 20px
+}
+summary .details div {
+  text-align: center
+}
+
+.details .years span,
+.details .months span,
+.details .weeks span {
+  font-size: 30px;
+  font-weight: 600
+}
+.themes {
+  width: 500px; 
+  padding: 0 10px;
+  display: flex;
+  position: absolute;
+  left: 0;
+  top: 0
+}
+.toggel {
+  background-color: #002A4E;
+  color: white;
+  display: flex;
+  place-items: center;
+  place-content: center;
+  padding: 0 5px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 30px;
+  height: 20px;
+  overflow: hidden
+}
+.colors {
+  list-style: none;
+  display: flex;
+  overflow: hidden;
+  width: 0px;
+  transition: width .5s;
+  border: 1px solid rgba(var(--color));
+  border-left: none;
+  border-radius: 5px;
+}
+.colors li {
+  background-color: #15B34C;
+  margin: 1px 5px;
+  height: 15px;
+  flex: 0 0 15px;
+  border-radius: 50%;
+  border: 1px solid #ECFAFF; 
+  box-shadow: 0 0px 5px 1px #DDDDDD;
+  cursor: pointer;
+}
