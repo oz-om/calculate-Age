@@ -4,20 +4,17 @@ let dateBirth = document.getElementById('dateBirth'),
 
 // set Current Date Dynamic
 let date = new Date();
-if (date.getDate() < 9) {
-  currentDate.value = `${date.getFullYear()}-${date.getMonth()+1}-0${date.getDate()}`;
-} else {
-  currentDate.value = `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}`;
-  if (date.getMonth() < 9) {
-    currentDate.value = `${date.getFullYear()}-0${date.getMonth()+1}-${date.getDate()}`;
-  } else {
-    currentDate.value = `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}`;
-  }
+let todayDate = `${date.getFullYear()}-${date.getMonth()+1}-${date.getDate()}`;
+if (date.getDate() < 10) {
+  todayDate = `${date.getFullYear()}-${date.getMonth()+1}-0${date.getDate()}`;
 }
-
-
-
-
+if (date.getMonth() < 10) {
+  todayDate = `${date.getFullYear()}-0${date.getMonth()+1}-${date.getDate()}`;
+}
+if (date.getDate() < 10 && date.getMonth() < 10) {
+  todayDate = `${date.getFullYear()}-0${date.getMonth()+1}-0${date.getDate()}`;
+}
+currentDate.value = todayDate;
 
 function getDate() {
   //date of birth
@@ -153,3 +150,4 @@ document.addEventListener('click', (e) => {
     colors.style.width = '0px'
   }
 });
+
